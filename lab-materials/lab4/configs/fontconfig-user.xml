@@ -1,0 +1,60 @@
+# =================================================================
+# File: lab-materials/lab4/configs/fontconfig-user.xml
+# =================================================================
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <!-- Set default fonts -->
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>Liberation Serif</family>
+      <family>DejaVu Serif</family>
+      <family>Times New Roman</family>
+    </prefer>
+  </alias>
+  
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Liberation Sans</family>
+      <family>DejaVu Sans</family>
+      <family>Arial</family>
+    </prefer>
+  </alias>
+  
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>Liberation Mono</family>
+      <family>DejaVu Sans Mono</family>
+      <family>Courier New</family>
+    </prefer>
+  </alias>
+  
+  <!-- Font rendering settings -->
+  <match target="font">
+    <edit mode="assign" name="antialias">
+      <bool>true</bool>
+    </edit>
+    <edit mode="assign" name="hinting">
+      <bool>true</bool>
+    </edit>
+    <edit mode="assign" name="hintstyle">
+      <const>hintslight</const>
+    </edit>
+    <edit mode="assign" name="rgba">
+      <const>rgb</const>
+    </edit>
+  </match>
+  
+  <!-- Improve rendering for small fonts -->
+  <match target="font">
+    <test name="size" qual="any" compare="less">
+      <double>9</double>
+    </test>
+    <edit mode="assign" name="hintstyle">
+      <const>hintfull</const>
+    </edit>
+  </match>
+</fontconfig>

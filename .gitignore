@@ -1,0 +1,44 @@
+# X Window Labs - .gitignore
+
+# Vagrant
+.vagrant/
+*.log
+
+# VirtualBox
+*.vbox-prev
+*.vdi
+*.vmdk
+
+# Lab generated files
+lab-materials/lab*/*.txt
+lab-materials/lab*/xorg.conf*
+**/lab-results/
+**/lab-progress/
+**/lab-backups/
+**/config-backups/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Font files (can be large)
+*.ttf
+*.otf
+*.woff*
+
+# Log files
+*.log
+*.out
+
+# Backup files
+*.backup
+*.bak
+*.orig
