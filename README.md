@@ -387,4 +387,4 @@ Contributions to improve the lab environment are welcome:
 
 ---
 
-**Happy Learning!** 🐧🖥️
+**Happy Learning!**
